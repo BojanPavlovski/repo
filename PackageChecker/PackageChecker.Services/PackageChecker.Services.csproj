@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PackageChecker.DataAccess\PackageChecker.DataAccess.csproj" />
+    <ProjectReference Include="..\PackageChecker.Domain\PackageChecker.Domain.csproj" />
+    <ProjectReference Include="..\PackageChecker.Dto\PackageChecker.Dto.csproj" />
+    <ProjectReference Include="..\PackageChecker.HelperClass\PackageChecker.HelperClass.csproj" />
+    <ProjectReference Include="..\PackageChecker.Mappers\PackageChecker.Mappers.csproj" />
+  </ItemGroup>
+
+</Project>
