@@ -1,0 +1,43 @@
+
+<div class="container-fluid">
+  <form #packageForm="ngForm" (ngSubmit)="getData(packageForm)">
+    <div class="form-group">
+      <label>Width</label>
+      <input type="number" class="form-control" name="width" ngModel required>
+      <small *ngIf="!packageForm.form.controls['width']?.valid && packageForm.form.controls['width']?.touched">
+        Width is required
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Height</label>
+      <input type="number" class="form-control" name="height" ngModel required>
+      <small *ngIf="!packageForm.form.controls['height']?.valid && packageForm.form.controls['height']?.touched">
+        Height is required
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Depth</label>
+      <input type="number" class="form-control" name="depth" ngModel required>
+      <small *ngIf="!packageForm.form.controls['depth']?.valid && packageForm.form.controls['depth']?.touched">
+        Depth is required
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Weight</label>
+      <input type="number" class="form-control" name="weight" ngModel required>
+      <small *ngIf="!packageForm.form.controls['weight']?.valid && packageForm.form.controls['weight']?.touched">
+        Weight is required
+      </small>
+    </div>
+      <br>
+    <button class="btn btn-primary" type="submit" [disabled]="!packageForm.valid">Submit</button>
+  </form>
+
+  <div *ngIf="responseData" class="mt-3">
+    <h3>Response Data:</h3>
+    <h2>{{ responseData | json }}</h2>
+  </div>
+</div>
